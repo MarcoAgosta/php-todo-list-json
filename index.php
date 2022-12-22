@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +23,7 @@
                 <h1 class="white display-1 text-center mb-4">Todo List</h1>
             
                 <ul class="list-group w-50 m-auto mb-4">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
+                    <li class="list-group-item" v-for="elemento in lista">{{elemento.impegno}}</li>
                 </ul>
 
                 <form action="" class="input-group w-50 m-auto">
