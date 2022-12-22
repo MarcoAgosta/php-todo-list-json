@@ -4,6 +4,9 @@ const app = createApp({
     data(){
         return{
             lista:[],
+            nuovoImpegno: {
+                impegno:"",
+            },
         }
     },
     methods:{
@@ -12,6 +15,13 @@ const app = createApp({
                 .then(resp=>{
                     this.lista=resp.data
                 })
+        },
+        inviaRichiesta(){
+            axios.post("API/creatodo.php", this.nuovoImpegno, {
+            headers: { 'Content-Type': 'multipart/form-data' }
+            }).then(resp=>{
+                this.fetchImpegni();
+            })
         }
     },
     mounted(){
