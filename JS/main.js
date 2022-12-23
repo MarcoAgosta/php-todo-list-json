@@ -16,15 +16,18 @@ const app = createApp({
                     this.lista=resp.data
                 })
         },
+
         inviaRichiesta(){
-            axios.post("API/creatodo.php", this.nuovoImpegno, {
-            headers: { 'Content-Type': 'multipart/form-data' }
-            }).then(resp=>{
-                this.fetchImpegni();
-                
-            })
-            this.nuovoImpegno= {
-                impegno:""
+            if (this.nuovoImpegno.impegno!==""){
+                axios.post("API/creatodo.php", this.nuovoImpegno, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+                }).then(resp=>{
+                    this.fetchImpegni();
+
+                })
+                this.nuovoImpegno= {
+                    impegno:""
+                }
             }
         }
     },
