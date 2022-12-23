@@ -6,9 +6,12 @@
         "impegno": "Cucinare la cena"
     },
     {
-        "impegno": null
+        "impegno": "Lavare i capelli"
     },
     {
-        "impegno": null
+        "impegno": "Dar da mangiare al cane"
+    },
+    {
+        "impegno": "Spazzolare il cane"
     }
 ]

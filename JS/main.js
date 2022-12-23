@@ -5,7 +5,7 @@ const app = createApp({
         return{
             lista:[],
             nuovoImpegno: {
-                impegno:"",
+                impegno: ""
             },
         }
     },
@@ -21,7 +21,11 @@ const app = createApp({
             headers: { 'Content-Type': 'multipart/form-data' }
             }).then(resp=>{
                 this.fetchImpegni();
+                
             })
+            this.nuovoImpegno= {
+                impegno:""
+            }
         }
     },
     mounted(){

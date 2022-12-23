@@ -26,9 +26,9 @@
                     <li class="list-group-item" v-for="elemento in lista">{{elemento.impegno}}</li>
                 </ul>
 
-                <form @submit.prevent="inviaRichiesta" class="input-group w-50 m-auto" method="POST">
-                    <input type="text" class="form-control" placeholder="Inserisci un elemento" aria-label="Inserisci un elemento" aria-describedby="button-addon2" v-model="nuovoImpegno.impegno">
-                    <button class="btn btn-outline-warning" type="button" id="button-addon2">Inserisci</button>
+                <form @submit.prevent="inviaRichiesta" class="input-group w-50 m-auto">
+                    <input type="text" class="form-control" placeholder="Inserisci un elemento" aria-label="Inserisci un elemento" aria-describedby="button-addon2" name="impegno" v-model="nuovoImpegno.impegno">
+                    <button class="btn btn-outline-warning" type="submit" id="button-addon2">Inserisci</button>
                 </form>
             </div>
         </div>

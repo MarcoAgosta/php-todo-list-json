@@ -4,7 +4,7 @@ $todo = file_get_contents("../todo.json");
 $todo = json_decode($todo, true);
 
 $nuovoImpegno = [
-    "impegno" => $_POST["nuovoImpegno"],
+    "impegno" => $_POST["impegno"],
   ];
 
 $todo[]=$nuovoImpegno;
